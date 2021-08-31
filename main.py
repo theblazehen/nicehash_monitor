@@ -2,15 +2,11 @@ import requests
 import nicehash
 from luno_python.client import Client
 
-from nh_config import *
+from config import *
 
 from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
-
-nh_api = nicehash.private_api(
-    "https://api2.nicehash.com", nh_org_id, nh_api_key_code, nh_api_secret_key_code
-)
 
 def btc_to_zar(btc):
     luno_api = Client(api_key_id=luno_key_id, api_key_secret=luno_key_secret)
