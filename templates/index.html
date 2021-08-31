@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <style>
+        body { margin:0;
+            background-color: #202020;
+        }
+        .columnholder {
+            width: 90px;
+            height: 149px;
+            border-right: 1px solid;
+            border-color: #fbc342;
+        }
+        .logo {
+            height: 90px;
+        }
+        .toptext {
+            height: 90px;
+            color: white;
+            font-size: 36px;
+            text-align: center;
+            border-bottom: 1px solid;
+            border-color: #fbc342;
+            vertical-align: middle;
+        }
+        .bottomtext {
+            height: 59px;
+            padding-top: 3px;
+            font-size: 22px;
+            color: #fbc342;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 149px; width: 360px; display: flex;">
+        <div class="columnholder">
+            <div class="logo">
+                <img src="/static/nicehash_logo_dark.png" width="90" height="90"/>
+            </div>
+            <div class="bottomtext" style="padding-top: 5px;">
+                {{ info['speed'] }} <br/> MH/s
+            </div>
+        </div>
+        <div class="columnholder">
+            <div class="toptext">
+                On<br/>line
+            </div>
+            <div class="bottomtext">
+                {{ info['workers'] }}<br/>Rigs
+            </div>
+        </div>
+        <div class="columnholder">
+            <div class="toptext">
+                Per<br/>day
+            </div>
+            <div class="bottomtext">
+                {{ info['profit_day'] }}<br/>ZAR
+            </div>
+        </div>
+        <div class="columnholder">
+            <div class="toptext">
+                Mon<br/>th
+            </div>
+            <div class="bottomtext">
+                {{ info['profit_month'] }}<br/>ZAR
+            </div>
+        </div>
+    </div>
+</body>
